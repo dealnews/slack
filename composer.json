@@ -1,5 +1,5 @@
 {
-    "name": "php-libraries/slack",
+    "name": "dealnews/slack",
     "type": "library",
     "description": "Slack PHP Library",
     "config": {
