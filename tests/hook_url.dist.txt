@@ -1,0 +1,1 @@
+Rename this file to hook_url.txt and put a Slack hook URL in it to run functional test

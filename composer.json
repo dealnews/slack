@@ -1,0 +1,44 @@
+{
+    "name": "php-libraries/slack",
+    "type": "library",
+    "description": "Slack PHP Library",
+    "config": {
+        "optimize-autoloader": true,
+        "discard-changes": true,
+        "sort-packages": true
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.89",
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpunit/phpunit": "^11"
+    },
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "DealNews\\Slack\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DealNews\\Slack\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phan": [
+            "phan -p"
+        ],
+        "test": [
+            "parallel-lint src/ tests/",
+            "phpunit --colors=never"
+        ],
+        "lint": [
+            "parallel-lint src/ tests/"
+        ],
+        "fix": [
+            "php-cs-fixer fix --config .php-cs-fixer.dist.php src tests"
+        ]
+    }
+}
