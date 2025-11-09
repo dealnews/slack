@@ -70,6 +70,8 @@ class Message {
      *              false or the error message from Slack.
      *
      * @throws MessageAttachmentException|GuzzleException|MessageException
+     *
+     * @phan-suppress PhanTypeInvalidThrowsIsInterface
      */
     public function send(string $channel, string|array $message, array $attachments = []): bool {
         $package = $this->buildPackage($channel, $message, $attachments);
@@ -206,7 +208,7 @@ class Message {
             );
         }
 
-        if (!empty($fields)) {
+        if (!empty($fields) && !empty($original_attachment)) {
             $filtered_attachment['fields'] = $fields;
             $attachment                    = $original_attachment;
         }
