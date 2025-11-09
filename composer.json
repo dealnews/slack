@@ -2,6 +2,7 @@
     "name": "dealnews/slack",
     "type": "library",
     "description": "Slack PHP Library",
+    "license": "BSD-3-Clause",
     "config": {
         "optimize-autoloader": true,
         "discard-changes": true,
