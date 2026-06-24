@@ -15,7 +15,7 @@
     },
     "require": {
         "php": "^8.2",
-        "guzzlehttp/guzzle": "^7.11"
+        "guzzlehttp/guzzle": "^7.12"
     },
     "autoload": {
         "psr-4": {
